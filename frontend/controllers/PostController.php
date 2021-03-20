@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 10/10/2015
- * Time: 3:00 PM
- */
+
 namespace frontend\controllers;
 
 use common\models\Comment;
@@ -36,7 +31,7 @@ class PostController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $model->createPost();
-            $this->redirect('?r=post/show-all');
+            $this->redirect(Url::to(['post/show-all']));
         }
 
         return $this->render('create', [

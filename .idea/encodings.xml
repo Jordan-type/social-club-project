@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/frontend/controllers/MessageController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/controllers/PostController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/controllers/RelationshipController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/controllers/SiteController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/controllers/UserController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/models/PostCreateForm.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/models/PostEditForm.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/layouts/content.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/layouts/header.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/layouts/left.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/message/compose.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/message/drafts.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/message/inbox.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/message/outbox.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/message/read.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/post/create.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/post/detail.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/post/edit.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/post/item.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/post/show.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/relationship/show-friend-item.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/relationship/show-friend.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/schedule/error.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/schedule/show-received.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/schedule/show.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/site/index.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/site/login.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/site/signup.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/user/friend-timeline.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/user/search-user-item.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/user/search-user.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/views/user/user-profile.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/web/js/basic.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Application.php" charset="UTF-8" />
+  </component>
+</project>

@@ -1,5 +1,7 @@
 <?php
 use yii\helpers\Url;
+
+
 $model = \common\models\User::findOne(['id' => Yii::$app->user->getId()]);
 
 $isAdmin = $model['is_admin'] == 1;
@@ -28,7 +30,7 @@ $isAdmin = $model['is_admin'] == 1;
         </div>
 
         <!-- search form -->
-        <form action="?r=user/find-username" method="post" class="sidebar-form">
+        <form action="<?=Url::to (['user/find-username']) ?>" method="post" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="username" class="form-control" placeholder="Search ..."/>
               <span class="input-group-btn">
@@ -44,26 +46,26 @@ $isAdmin = $model['is_admin'] == 1;
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     ['label' => 'Table of options', 'options' => ['class' => 'header']],
-                    ['label' => 'Posts', 'icon' => 'fa fa-edit', 'url' => ['post/show-all'], 'active' => '0'],
+                    ['label' => 'Posts', 'icon' => 'edit', 'url' => ['post/show-all'], 'active' => '0'],
                     [
                         'label' => 'Relationship',
-                        'icon' => 'fa fa-group',
+                        'icon' => 'group',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Friend', 'icon' => 'fa fa-circle-o', 'url' => '?r=relationship/show-list-friend&friend_type=1',],
-                            ['label' => 'Relatives', 'icon' => 'fa fa-circle-o', 'url' => '?r=relationship/show-list-friend&friend_type=2',],
+                            ['label' => 'Friend', 'icon' => 'circle-o', 'url' => '?r=relationship/show-list-friend&friend_type=1',],
+                            ['label' => 'Relatives', 'icon' => 'circle-o', 'url' => '?r=relationship/show-list-friend&friend_type=2',],
                         ],
                     ],
                     // ['label' => 'Calendar', 'icon' => 'fa fa-calendar', 'url' => ['/schedule/show']],
-                    ['label' => 'Message', 'icon' => 'fa fa-envelope', 'url' => ['message/show-inbox']],
+                    ['label' => 'Message', 'icon' => 'envelope', 'url' => ['message/show-inbox']],
                     [
                         'label' => 'Administrators',
-                        'icon' => 'fa fa-cogs',
+                        'icon' => 'cogs',
                         'url' => '#',
                         'visible' => $isAdmin,
                         'items' => [
-                            ['label' => 'user management', 'icon' => 'fa fa-user', 'url' => ['admin/user-manage']],
-                            ['label' => 'Managing articles', 'icon' => 'fa fa-edit', 'url' => ['admin/post-manage']],
+                            ['label' => 'user management', 'icon' => 'user', 'url' => ['admin/user-manage']],
+                            ['label' => 'Managing articles', 'icon' => 'edit', 'url' => ['admin/post-manage']],
                         ],
                     ],
                 ],

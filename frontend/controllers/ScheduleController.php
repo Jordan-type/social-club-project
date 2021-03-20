@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 10/30/2015
- * Time: 10:58 PM
- */
 
 namespace frontend\controllers;
 
@@ -12,6 +6,7 @@ namespace frontend\controllers;
 use common\models\Schedule;
 use common\models\ScheduleNotification;
 use common\models\User;
+use yii\helpers\Url;
 use frontend\models\EventCreateForm;
 use yii\web\Controller;
 
@@ -84,13 +79,13 @@ class ScheduleController extends Controller
 
         ScheduleNotification::deleteAll(['id' => $id]);
 
-        $this->redirect('?r=schedule/create-event');
+        $this->redirect(Url::to(['schedule/create-event']));
     }
 
     public function actionDeclineReceivedSchedule($id)
     {
         ScheduleNotification::deleteAll(['id' => $id]);
 
-        $this->redirect('?r=schedule/create-event');
+        $this->redirect(Url::to(['schedule/create-event']));
     }
 }

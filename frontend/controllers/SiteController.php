@@ -226,6 +226,6 @@ class SiteController extends Controller
     {
         User::updateAll(['themeId' => $id], 'id=' .Yii::$app->user->getId());
 
-        $this->redirect('?r=site/index');
+        $this->redirect(Url::to(['site/index']));
     }
 }

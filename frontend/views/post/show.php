@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= LinkPager::widget(['pagination' => $pagination]) ?>
 
     <a class="btn btn-app" href="<?= \yii\helpers\Url::to(['/post/create']) ?>" style="position: fixed; bottom: 50px; right: 10px; border-color: #3c8dbc">
-        <i class="fa fa-edit"></i> Reply
+        <i class="fa fa-edit"></i> Post Something
     </a>
 
 </div>

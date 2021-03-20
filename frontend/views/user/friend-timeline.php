@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 11/4/2015
- * Time: 7:53 PM
- */
-$this->title = 'Sight seeing';
+
+use yii\helpers\Url;
+
+$this->title = 'view details';
 $this->params['breadcrumbs'][] = $this->title;
 
 $listPost = \common\models\Post::find()->where(['user_id' => $model['id']])->asArray()->all();
@@ -55,7 +52,8 @@ $friendCount = \common\models\Relationship::find()->where(['user_id_1' => $model
                         <b>Relationship</b> <a class="pull-right"><?= $friendCount ?></a>
                     </li>
                 </ul>
-                <a href="?r=message/compose-with-a-user&user_id=<?= $model['id'] ?>" class="btn btn-block btn-warning btn-sm"><b>Send Message</b></a>
+                <a href="<?= Url::to(['/message/compose-with-a-user', 'id' => $model['id']]) ?>" class="btn btn-block btn-warning btn-sm"><b>Send Message</b></a>
+                
                 <?php
                 $user_id_1 = Yii::$app->user->getId();
                 $user_id_2 = $model['id'];

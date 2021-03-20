@@ -1,16 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 10/13/2015
- * Time: 10:15 PM
- */
+use yii\helpers\Url;
+
 $postCount = \common\models\Post::find()->where(['user_id' => $model['id']])->count();
 $friendCount = \common\models\Relationship::find()->where(['user_id_1' => $model['id'], 'status' => 1])->count()
     + \common\models\Relationship::find()->where(['user_id_2' => $model['id'], 'status' => 1])->count();
 ?>
 
-<a href="?r=user/show-friend-timeline&id=<?= $model['id'] ?>">
+<a href="<?= Url::to(['/user/show-friend-timeline', 'id' => $model['id']]) ?>">
+
     <div class="box box-widget widget-user">
         <!-- Add the bg color to the header using any of the bg-* classes -->
         <div class="widget-user-header bg-aqua-active">

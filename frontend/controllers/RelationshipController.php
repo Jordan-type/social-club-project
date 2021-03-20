@@ -1,17 +1,12 @@
 <?php
+
 namespace frontend\controllers;
+
 use common\models\Relationship;
 use common\models\RelationshipNotification;
 use common\models\User;
 use Yii;
 use yii\web\Controller;
-
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 10/13/2015
- * Time: 4:53 PM
- */
 
 class RelationshipController extends Controller
 {

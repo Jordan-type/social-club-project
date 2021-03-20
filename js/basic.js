@@ -28,7 +28,7 @@ $(document).ready(function(){
             var container = $(this).parent().parent().parent();
             $.ajax({
                 type:"POST",
-                url:"?r=post/delete",
+                url:"http://localhost:8081/2020-Projects/social-club-project/post/delete",
                 data:data,
                 success:function() {
                     container.hide();
@@ -43,7 +43,7 @@ $(document).ready(function(){
         var data = "id=" + $(this).attr('id');
         $.ajax({
            type:"POST",
-            url:"?r=post/like",
+            url:"http://localhost:8081/2020-Projects/social-club-project/post/like",
             data:data,
         });
     });
@@ -54,7 +54,7 @@ $(document).ready(function(){
         var data = "id=" + $(this).attr('id');
         $.ajax({
             type:"POST",
-            url:"?r=post/unlike",
+            url:"http://34.83.126.180/jordan/social-club-project/post/unlike",
             data:data,
         });
     });
@@ -69,7 +69,7 @@ $(document).ready(function(){
            $(this).val("");
            $.ajax({
                type:"POST",
-               url:"?r=post/comment",
+               url:"http://34.83.126.180/jordan/social-club-project/post/comment",
                data:data,
                success:function(response) {
                   if(response !="NO"){
@@ -88,7 +88,7 @@ $(document).ready(function(){
         var data = $(this).attr('id') + "&create_at=" + getCurrentTime();
         $.ajax({
             type:"POST",
-            url:"?r=relationship/send-friend-request-as-fellow",
+            url:"http://34.83.126.180/jordan/social-club-project/relationship/send-friend-request-as-fellow",
             data:data,
             success:function(response) {
                 alert("Submit request successfully!");
@@ -103,7 +103,7 @@ $(document).ready(function(){
         var data = $(this).attr('id') + "&create_at=" + getCurrentTime();
         $.ajax({
             type:"POST",
-            url:"?r=relationship/send-friend-request-as-family",
+            url:"http://34.83.126.180/jordan/social-club-project/relationship/send-friend-request-as-family",
             data:data,
             success:function(response) {
                 alert("Submit request successfully!");
@@ -122,7 +122,7 @@ $(document).ready(function(){
         var data = $(this).attr('id') + "&update_at=" + getCurrentTime();
         $.ajax({
             type:"POST",
-            url:"?r=relationship/accept-friend-request-as-fellow",
+            url:"http://34.83.126.180/jordan/social-club-project/relationship/accept-friend-request-as-fellow",
             data:data,
             success:function(response) {
                 if (response == 'YES') {
@@ -138,7 +138,7 @@ $(document).ready(function(){
         var data = $(this).attr('id') + "&update_at=" + getCurrentTime();
         $.ajax({
             type:"POST",
-            url:"?r=relationship/accept-friend-request-as-family",
+            url:"http://34.83.126.180/jordan/social-club-project/relationship/accept-friend-request-as-family",
             data:data,
             success:function(response) {
                 if (response == 'YES') {
@@ -154,7 +154,7 @@ $(document).ready(function(){
         $('.rel_notify_count').hide();
         $.ajax({
             type:"POST",
-            url:"?r=notification/make-old-relationship-notification",
+            url:"http://34.83.126.180/jordan/social-club-project/notification/make-old-relationship-notification",
         });
     });
 
@@ -162,7 +162,7 @@ $(document).ready(function(){
         $('.notify_msg_count').hide();
         $.ajax({
             type:"POST",
-            url:"?r=notification/make-old-message-notification",
+            url:"http://34.83.126.180/jordan/social-club-project/notification/make-old-message-notification",
         });
     });
 
@@ -170,7 +170,7 @@ $(document).ready(function(){
        $('.notify_post_count').hide();
         $.ajax({
             type:"POST",
-            url:"?r=notification/make-old-post-notification",
+            url:"http://34.83.126.180/jordan/social-club-project/notification/make-old-post-notification",
         });
     });
 

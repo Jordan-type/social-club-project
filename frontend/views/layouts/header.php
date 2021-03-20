@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -285,7 +286,7 @@ $newMsgNotifyCount = \common\models\Message::find()->where(['receiver_id' => Yii
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="<?= \yii\helpers\Url::to(['/user/edit-user-profile']) ?>" class="btn btn-default btn-flat">Profile</a>
+                                <a href="<?= Url::to(['/user/edit-user-profile']) ?>" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(

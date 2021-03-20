@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 $cmtCount = \common\models\Comment::find()->where(['post_id' => $model['id']])->count();
 $likeCount = \common\models\Like::find()->where(['post_id' => $model['id']])->count();
 
@@ -16,11 +18,15 @@ $isLiked = \common\models\Like::findOne(['post_id' => $model['id'], 'user_id' =>
                 echo Yii::$app->request->baseUrl ."/images/new-post-alert.jpg";
             }
             ?>" alt="user image">
-            <span class="username"><a href="?r=post/detail&id=<?= $model['id'] ?>"><?= $model['title'] ?></a></span>
+            <span class="username"><a href="<?= Url::to(['post/detail', 'id' => $model['id']]) ?>"><?= $model['title'] ?></a></span>
+            
             <span class="description"><?= $model['create_at'] ?></span>
         </div><!-- /.user-block -->
         <div class="box-tools">
-            <a href="<?= Yii::$app->request->baseUrl ."?r=post/edit&id=" .$model['id'] ?>" class="btn btn-box-tool" data-widget="edit" title="Click to edit"><i class="fa fa-edit"></i></a>
+            <!-- <a href="<?= Yii::$app->request->baseUrl ."?r=post/edit&id=" .$model['id'] ?>" class="btn btn-box-tool" data-widget="edit" title="Click to edit"><i class="fa fa-edit"></i></a> -->
+            
+            <a href="<?= Url::to(["post/edit", 'id' => $model['id']]) ?>" class="btn btn-box-tool" data-widget="edit" title="Click to edit"><i class="fa fa-pencil"></i></a>
+            
             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             <a class="del_post" id="<?= $model['id'] ?>"><button class="btn btn-box-tool" title="Click to delete"><i class="fa fa-times"></i></button></a>
         </div><!-- /.box-tools -->

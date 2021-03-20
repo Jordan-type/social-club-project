@@ -7,7 +7,7 @@ use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = 'Reply';
+$this->title = 'Create a post';
 $this->params['breadcrumbs'][] = $this->title;
 
 $sql = 'SELECT * FROM relationship WHERE ((user_id_1=:user_id)
