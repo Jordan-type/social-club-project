@@ -200,7 +200,7 @@ $newMsgNotifyCount = \common\models\Message::find()->where(['receiver_id' => Yii
                         <span class="rel_notify_count label label-danger"><?php if (sizeof($listScheduleNotify) > 0) echo sizeof($listScheduleNotify);  ?></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">Bạn có <?= sizeof($listScheduleNotify) ?> job announcement </li>
+                        <li class="header">You have <?= sizeof($listScheduleNotify) ?> job announcement </li>
                         <li>
                             <!-- inner menu: contains the actual data -->
                             <ul class="menu">
